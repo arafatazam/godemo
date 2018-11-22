@@ -5,12 +5,18 @@
 
 package app
 
+import (
+	"github.com/arafatazam/godemo/services/hello"
+)
+
 // Injectors from injectors.go:
 
 func NewServer() *Server {
 	mux := ProvideChi()
+	helloHello := hello.ProvideHello()
 	server := &Server{
-		Mux: mux,
+		Mux:     mux,
+		helloer: helloHello,
 	}
 	return server
 }

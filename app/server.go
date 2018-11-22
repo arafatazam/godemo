@@ -8,6 +8,7 @@ import(
 //Server holds dependencies
 type Server struct{
 	Mux *chi.Mux
+	helloer helloer
 }
 
 func (s *Server)ServeHTTP(w http.ResponseWriter, r *http.Request){
